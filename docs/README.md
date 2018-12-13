@@ -1,10 +1,10 @@
 # Unemployed API
 
-> This API allows the front end of [Unemployed](https://unemployed.herokuapp.com) to create and authenticate users, and CRUD posts and comments.
+## This API allows the front end of [Unemployed](https://unemployed.herokuapp.com) to create and authenticate users, and CRUD posts and comments. The `code` for this api can be found on my [GitHub](https://github.com/IkeyBenz/Unemployed-API).
 
 ----
 
-Because the api and front end are hosted on the same server, all api endpoints need to be accessed from the /api/ route.
+Because the api and front end are hosted on the same server (https://unemployed.herokuapp.com), all api endpoints need to be accessed from the /api/ route.
 
 ## Authentication
 
