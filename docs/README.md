@@ -14,8 +14,9 @@ All requests that deal with authenticating and creating users can be accessed fr
 > POST: `/api/auth/signup/`
 
 Requires:
-
-    { name: String, email: String,  password: String }
+```javascript
+{ name: String, email: String,  password: String }
+```
 
 Modifies: Creates a new user with given credentials
 
@@ -24,15 +25,15 @@ Returns: A cookie containing a JWT token signed for the newly made user
 >POST: `/api/auth/signin/`
 
 Requires: 
-
-    { email: String, password: String }
+```javascript
+{ email: String, password: String }
+```
 
 Modifies: Nothing
 
 Returns: A cookie containing a JWT token signed for the found user, or an error because the user couldn't be found.
 
 >GET: `/api/auth/authenticatedUser/`
-
 
 Requires: A cookie named UnToken containing a JWT token for a user
 
@@ -54,12 +55,12 @@ The POST, PATCH, and DELETE requests require a cookie name UnToken that contains
 
 ---
 
->POST: /api/posts/
+>POST: `/api/posts/`
 
 Requires:  
-
-    { title: String, content: String, author: ObjectID }
-
+```javascript
+{ title: String, content: String, author: ObjectID }
+```
 Modifies: Creates a new post and adds it to the users posts array
 
 Returns: An error or success message.
@@ -74,9 +75,10 @@ Returns: The post document with the given Id
 
 >PATCH: `/api/posts/:id`
 
-Requires: The parameters you wish to update in the post. Options include: 
-
-    { title: String, content: String }
+### Requires: The parameters you wish to update in the post. Options include: 
+```javascript
+{ title: String, content: String }
+```
 
 Modifies: The post document with the given Id
 
@@ -99,8 +101,9 @@ The POST, PATCH, and DELETE requests require a cookie name UnToken that contains
 
 Requires: 
     
-    { content: String, postId: ObjectID, author: ObjectID }
-
+```javascript
+{ content: String, postId: ObjectID, author: ObjectID }
+```
 Modifies: Creates a new comment, adds it to the users comments array, and adds it to the post's (from specified postId) comments array.
 
 Returns: An error or success message.
@@ -116,8 +119,9 @@ Returns: The comment document with the given Id
 >PATCH: `/api/comments/:id`
 
 Requires: 
-
-    { content: String }
+```javascript
+{ content: String }
+```
 
 Modifies: The comment document with the given Id
 
